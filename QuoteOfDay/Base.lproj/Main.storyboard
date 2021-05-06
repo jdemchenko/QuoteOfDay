@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QuoteOfDay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ng0-gy-0fX">
+                                <rect key="frame" x="16" y="727" width="382" height="75"/>
+                                <color key="backgroundColor" systemColor="systemFillColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="Wwf-dc-f0P"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                <state key="normal" title="Guote">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="quoteBtnPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="dNr-Ll-A58"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="uqB-ls-PPd">
+                                <rect key="frame" x="16" y="302.5" width="382" height="191"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOL-fw-8Wb">
+                                        <rect key="frame" x="16" y="0.0" width="350" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="hzL-Go-6oR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="21"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAj-2v-97Z">
+                                        <rect key="frame" x="0.0" y="171" width="382" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="N3T-yi-hB5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="qOL-fw-8Wb" firstAttribute="leading" secondItem="uqB-ls-PPd" secondAttribute="leading" constant="16" id="3bb-Zi-VYb"/>
+                                    <constraint firstAttribute="trailing" secondItem="qOL-fw-8Wb" secondAttribute="trailing" constant="16" id="Fvi-ZP-gqA"/>
+                                    <constraint firstItem="aAj-2v-97Z" firstAttribute="leading" secondItem="uqB-ls-PPd" secondAttribute="leading" id="G9f-Hc-nsN"/>
+                                </constraints>
+                            </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="2f1-7X-aB3">
+                                <rect key="frame" x="0.0" y="44" width="414" height="683"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uqB-ls-PPd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="0pg-dF-wzS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ng0-gy-0fX" secondAttribute="trailing" constant="16" id="3Rj-O2-Blt"/>
+                            <constraint firstItem="Ng0-gy-0fX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="58k-wU-iLT"/>
+                            <constraint firstItem="Ng0-gy-0fX" firstAttribute="top" secondItem="2f1-7X-aB3" secondAttribute="bottom" id="Eb9-qO-eJ1"/>
+                            <constraint firstItem="uqB-ls-PPd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FMK-ub-HJn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uqB-ls-PPd" secondAttribute="trailing" constant="16" id="JgD-U8-Yri"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2f1-7X-aB3" secondAttribute="trailing" id="SXy-xk-E4G"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ng0-gy-0fX" secondAttribute="bottom" constant="60" id="c7x-82-ekU"/>
+                            <constraint firstItem="2f1-7X-aB3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fJt-TR-v4t"/>
+                            <constraint firstItem="uqB-ls-PPd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="rR9-zm-raa"/>
+                            <constraint firstItem="2f1-7X-aB3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xCO-O6-qkb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="2f1-7X-aB3" id="uVG-Qf-ugD"/>
+                        <outlet property="authorOfQuoteLabel" destination="aAj-2v-97Z" id="qCY-Z4-H5r"/>
+                        <outlet property="bodyOfQuoteLabel" destination="qOL-fw-8Wb" id="5Nm-JF-bh5"/>
+                        <outlet property="quoteBtn" destination="Ng0-gy-0fX" id="MMU-45-GSE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="77.678571428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemFillColor">
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -28,10 +28,11 @@ class ViewController: UIViewController {
         bodyOfQuoteLabel.text = nil
         
         quoteBtn.layer.cornerRadius = quoteBtn.frame.height / 2
+        quoteBtn.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
+        quoteBtn.layer.shadowOpacity = 1.0
         
         activityIndicator.hidesWhenStopped = true
         activityIndicator.style = .large
-        
     }
     
     
